@@ -25,3 +25,11 @@
 <img  src="ImagenesEjecucion/656afe81-3809-4043-b23d-58644acc02a8.jpg" width="300px" />
 </p>
 
+# Gracias por ver
+<p align="center">
+<img  src="ImagenesEjecucion/hacer-venta.gif" width="300px" />
+</p>
+
+
+
+
