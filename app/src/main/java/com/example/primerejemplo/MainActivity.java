@@ -12,6 +12,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -78,10 +79,7 @@ public class MainActivity extends AppCompatActivity {
     public void Enviar(View view){
         //Se crea una instancia de la actividad que se quiere abrir
         Intent i = new Intent(this, MainActivity2.class);
-
-
         String Genero = RdHombre.isChecked()?"Hombre":"Mujer";
-
         //se envia el dato a la siguiente actividad
         i.putExtra("cedula",txtCedula.getText().toString());
         i.putExtra("nombres",txtNombre.getText().toString());
@@ -90,8 +88,12 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("ciudad",txtCiudad.getText().toString());
         i.putExtra("Fecha",txtFecha.getText().toString());
         i.putExtra("genero",Genero);
+        if(Verficiar()) startActivity(i);
+        else {
+            Toast.makeText(this, "Llene el formulario por favor", Toast.LENGTH_SHORT).show();
+        }
+
         //se inicia la actividad
-        startActivity(i);
     }
     public void Limpiar(View view){
         txtCedula = (EditText)findViewById(R.id.txtCedula);;
@@ -109,5 +111,25 @@ public class MainActivity extends AppCompatActivity {
         txtFecha.setText("");
         RdHombre.setChecked(false);
         RdMujer.setChecked(false);
+    }
+    public boolean Verficiar(){
+        txtCedula = (EditText)findViewById(R.id.txtCedula);;
+        txtNombre = (EditText)findViewById(R.id.txtNombres);
+        txtCorreo = (EditText)findViewById(R.id.txtCorreo);
+        txtTelefono = (EditText)findViewById(R.id.txtTelefono);
+        txtCiudad = (EditText)findViewById(R.id.txtCiudad);
+        txtFecha = (TextView)findViewById(R.id.txtFecha);
+        RdMujer = (RadioButton)findViewById(R.id.rbMujer);
+        RdHombre = (RadioButton)findViewById(R.id.rbHombre);
+
+        if(txtCedula.getText().toString().trim().length() == 0) return false;
+        if(txtNombre.getText().toString().trim().length() == 0) return false;
+        if(txtCorreo.getText().toString().trim().length() == 0) return false;
+        if(txtTelefono.getText().toString().trim().length() == 0) return false;
+        if(txtCiudad.getText().toString().trim().length() == 0) return false;
+        if(txtFecha.getText().toString().trim().length() == 0) return false;
+
+        Boolean retonra = RdMujer.isChecked()?true:RdHombre.isChecked()?true:false;
+        return retonra;
     }
 }
