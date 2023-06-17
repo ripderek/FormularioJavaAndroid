@@ -39,5 +39,113 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.055"
         app:layout_constraintWidth="0dp" />
+    <TextView
+        android:id="@+id/lblNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Nombres"
+        android:inputType="number"
+        android:textColor="#0e076c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCedula"
+        app:layout_constraintVertical_bias="0.055"
+        app:layout_constraintWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lblCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Correo"
+        android:inputType="number"
+        android:textColor="#0e076c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblNombres"
+        app:layout_constraintVertical_bias="0.075"
+        app:layout_constraintWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lblTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Telefono"
+        android:inputType="number"
+        android:textColor="#0e076c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCorreo"
+        app:layout_constraintVertical_bias="0.082"
+        app:layout_constraintWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lblCiudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Ciudad"
+        android:inputType="number"
+        android:textColor="#0e076c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTelefono"
+        app:layout_constraintVertical_bias="0.092"
+        app:layout_constraintWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lblFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Fecha"
+        android:inputType="number"
+        android:textColor="#0e076c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCiudad"
+        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lblGenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Genero"
+        android:inputType="number"
+        android:textColor="#0e076c"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblFecha"
+        app:layout_constraintVertical_bias="0.178"
+        app:layout_constraintWidth="0dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

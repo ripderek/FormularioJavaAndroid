@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#2196F3"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="¡Bienvenido!"
         android:textColor="#16133f"
         android:textSize="50dp"
@@ -40,6 +41,23 @@
         app:layout_constraintVertical_bias="0.018"
         app:layout_constraintWidth="0dp" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="115dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="20dp"
+        android:text="Genero:"
+        android:textColor="#676573"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFecha"
+        app:layout_constraintVertical_bias="0.18"
+        app:layout_constraintWidth="80dp" />
+
     <EditText
         android:id="@+id/txtCedula"
         android:layout_width="wrap_content"
@@ -48,6 +66,7 @@
         android:layout_marginEnd="20dp"
         android:hint="Cédula"
         android:inputType="number"
+        android:maxLength="10"
         android:textColor="#0e076c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,8 +83,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Nombres"
-        android:textColor="#0e076c"
         android:inputType="text"
+        android:maxLength="500"
+        android:textColor="#0e076c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,6 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtCedula"
         app:layout_constraintVertical_bias="0.025"
         app:layout_constraintWidth="0dp" />
+
     <EditText
         android:id="@+id/txtCorreo"
         android:layout_width="wrap_content"
@@ -80,8 +101,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Correo"
-        android:textColor="#0e076c"
         android:inputType="textEmailAddress"
+        android:textColor="#0e076c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -89,6 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNombres"
         app:layout_constraintVertical_bias="0.025"
         app:layout_constraintWidth="0dp" />
+
     <EditText
         android:id="@+id/txtTelefono"
         android:layout_width="wrap_content"
@@ -96,8 +118,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Telefono"
-        android:textColor="#0e076c"
         android:inputType="phone"
+        android:maxLength="10"
+        android:textColor="#0e076c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -105,6 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtCorreo"
         app:layout_constraintVertical_bias="0.025"
         app:layout_constraintWidth="0dp" />
+
     <EditText
         android:id="@+id/txtCiudad"
         android:layout_width="wrap_content"
@@ -112,8 +136,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:hint="Ciudad"
-        android:textColor="#0e076c"
         android:inputType="text"
+        android:maxLength="200"
+        android:textColor="#0e076c"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -122,16 +147,84 @@
         app:layout_constraintVertical_bias="0.025"
         app:layout_constraintWidth="0dp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="172dp"
-        android:layout_height="56dp"
-        android:onClick="Enviar"
-        android:text="Guardar datos"
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="23dp"
+        android:hint="Fecha de Nacimiento"
+        android:inputType="text"
+        android:maxLength="200"
+        android:textColor="#0e076c"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCiudad" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCiudad"
+        app:layout_constraintVertical_bias="0.060"
+        app:layout_constraintWidth="0dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="107dp"
+        android:layout_height="50dp"
+        android:onClick="Enviar"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgroup"
+        app:layout_constraintVertical_bias="0.70" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="107dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/white"
+        android:onClick="Limpiar"
+        android:text="Limpiar"
+        android:textColor="#4E3591"
+        android:textColorHighlight="#FEFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FDFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.70"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:layout_width="225dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/txtFecha"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rbHombre"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:text="Hombre" />
+
+        <RadioButton
+            android:id="@+id/rbMujer"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="Mujer" />
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
